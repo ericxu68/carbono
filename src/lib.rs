@@ -1,6 +1,6 @@
 //! # Carbono
 //!
-//! Carbono Dive is a simple Rust API extension for Datetime.
+//! Carbono Dive is a simple Rust API extension for chrono DateTime.
 //!
 //! ```ini
 //! [dependencies]
