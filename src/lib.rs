@@ -27,6 +27,8 @@
 //! fn main() {
 //!     let carbono = Carbono::now(); // 1999-12-31 23:59:59
 //!
+//!     println!("{}", carbono); // 1999-12-31 23:59:59 UTC
+//!
 //!     assert_eq!(carbono.timestamp(), 946684799);
 //!
 //!     assert_eq!(carbono.rfc3339(), "1999-12-31T23:59:59+00:00");
@@ -41,6 +43,8 @@
 //!
 //!     assert_eq!(carbono.date(), "1999-12-31");
 //!     assert_eq!(carbono.time(), "23:59:59");
+//!
+//!     assert_eq!(format!("{:?}", carbono.iso_week()), "1999-W52");
 //!
 //!     assert_eq!(carbono.weekday(), 4); // Friday
 //!

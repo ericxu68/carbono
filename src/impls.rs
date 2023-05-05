@@ -1,5 +1,5 @@
 use crate::Carbono;
-use chrono::prelude::*;
+use chrono::{prelude::*, IsoWeek};
 
 impl Carbono {
     pub fn timestamp(&self) -> i64 {
@@ -48,6 +48,10 @@ impl Carbono {
 
     pub fn weekday(&self) -> u8 {
         self.datetime.weekday() as u8
+    }
+
+    pub fn iso_week(&self) -> IsoWeek {
+        self.datetime.iso_week()
     }
 
     pub fn is_past(&self) -> bool {
