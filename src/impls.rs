@@ -38,6 +38,10 @@ impl Carbono {
         self.datetime.second()
     }
 
+    pub fn datetime(&self) -> String {
+        format!("{} {}", self.date(), self.time())
+    }
+
     pub fn date(&self) -> String {
         self.datetime.date_naive().to_string()
     }
@@ -108,5 +112,9 @@ impl Carbono {
 
     pub fn is_sunday(&self) -> bool {
         self.weekday() == Weekday::Sun as u8
+    }
+
+    pub fn is_leap_year(&self) -> bool {
+        (self.year() % 4 == 0) && ((self.year() % 100 != 0) || (self.year() % 400 == 0))
     }
 }

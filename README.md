@@ -34,6 +34,8 @@ fn main() {
     assert_eq!(carbono.minute(), 59);
     assert_eq!(carbono.second(), 59);
 
+    assert_eq!(carbono.datetime(), "1999-12-31 23:59:59");
+
     assert_eq!(carbono.date(), "1999-12-31");
     assert_eq!(carbono.time(), "23:59:59");
 
@@ -53,6 +55,8 @@ fn main() {
     assert_eq!(carbono.add_day().is_today(), false); // 2000-01-01
 
     assert_eq!(carbono.add_year().add_month().date(), "2001-01-31");
+
+    assert_eq!(carbono.start_year().datetime(), "1999-01-01 00:00:00");
 }
 ```
 
@@ -86,3 +90,16 @@ fn main() {
 - `sub_second()`
 - `add_seconds(seconds: i64)`
 - `sub_seconds(seconds: i64)`
+
+### Move to the start/end of period
+
+- `start_year`
+- `start_month`
+- `start_day`
+- `start_hour`
+- `start_minute`
+- `end_year`
+- `end_month`
+- `end_day`
+- `end_hour`
+- `end_minute`
