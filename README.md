@@ -18,18 +18,6 @@ carbono = "0.1"
 use carbono::Carbono;
 
 fn main() {
-    let carbono = Carbono::now();
-
-    println!("{}", carbono);
-}
-```
-
-### Get the date and/or time
-
-```rust
-use carbono::Carbono;
-
-fn main() {
     let carbono = Carbono::now(); // 1999-12-31 23:59:59
 
     println!("{}", carbono); // 1999-12-31 23:59:59 UTC
