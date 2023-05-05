@@ -35,27 +35,27 @@ mod tests {
     fn it_can_add_a_minute() {
         let carbono = Carbono::now().add_minute();
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2000, 1, 1, 0, 0, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2022, 12, 15, 12, 31, 0).unwrap());
     }
 
     #[test]
     fn it_can_subtract_a_minute() {
         let carbono = Carbono::now().sub_minute();
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(1999, 12, 31, 23, 58, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2022, 12, 15, 12, 29, 0).unwrap());
     }
 
     #[test]
     fn it_can_add_minutes() {
         let carbono = Carbono::now().add_minutes(10);
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2000, 1, 1, 0, 9, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2022, 12, 15, 12, 40, 0).unwrap());
     }
 
     #[test]
     fn it_can_subtract_minutes() {
         let carbono = Carbono::now().sub_minutes(10);
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(1999, 12, 31, 23, 49, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2022, 12, 15, 12, 20, 0).unwrap());
     }
 }

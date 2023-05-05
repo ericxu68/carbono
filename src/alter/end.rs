@@ -80,50 +80,50 @@ mod tests {
 
     #[test]
     fn it_can_move_to_the_end_of_the_year() {
-        let carbono = Carbono::now().sub_month().end_year();
+        let carbono = Carbono::now().end_year();
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(1999, 12, 31, 23, 59, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2022, 12, 31, 23, 59, 59).unwrap());
     }
 
     #[test]
     fn it_can_move_to_the_end_of_the_month() {
-        let carbono = Carbono::now().sub_month().sub_week().end_month();
+        let carbono = Carbono::now().end_month();
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(1999, 11, 30, 23, 59, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2022, 12, 31, 23, 59, 59).unwrap());
     }
 
     #[test]
     fn it_can_move_to_the_end_of_the_month_february_without_leap_year() {
-        let carbono = Carbono::now().sub_months(10).sub_week().end_month();
+        let carbono = Carbono::now().sub_year().sub_months(10).end_month();
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(1999, 02, 28, 23, 59, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2021, 2, 28, 23, 59, 59).unwrap());
     }
 
     #[test]
     fn it_can_move_to_the_end_of_the_month_february_with_leap_year() {
-        let carbono = Carbono::now().add_year().sub_months(10).sub_week().end_month();
+        let carbono = Carbono::now().sub_years(2).sub_months(10).end_month();
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2000, 02, 29, 23, 59, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2020, 2, 29, 23, 59, 59).unwrap());
     }
 
     #[test]
     fn it_can_move_to_the_end_of_the_day() {
-        let carbono = Carbono::now().sub_month().sub_week().sub_hour().end_day();
+        let carbono = Carbono::now().end_day();
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(1999, 11, 23, 23, 59, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2022, 12, 15, 23, 59, 59).unwrap());
     }
 
     #[test]
     fn it_can_move_to_the_end_of_the_hour() {
-        let carbono = Carbono::now().sub_month().sub_week().sub_hour().sub_minute().end_hour();
+        let carbono = Carbono::now().end_hour();
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(1999, 11, 23, 22, 59, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2022, 12, 15, 12, 59, 59).unwrap());
     }
 
     #[test]
     fn it_can_move_to_the_end_of_the_minute() {
-        let carbono = Carbono::now().sub_month().sub_week().sub_hour().sub_minute().sub_second().end_minute();
+        let carbono = Carbono::now().end_minute();
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(1999, 11, 23, 22, 58, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2022, 12, 15, 12, 30, 59).unwrap());
     }
 }

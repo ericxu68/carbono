@@ -35,27 +35,27 @@ mod tests {
     fn it_can_add_a_week() {
         let carbono = Carbono::now().add_week();
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2000, 1, 7, 23, 59, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2022, 12, 22, 12, 30, 0).unwrap());
     }
 
     #[test]
     fn it_can_subtract_a_week() {
         let carbono = Carbono::now().sub_week();
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(1999, 12, 24, 23, 59, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2022, 12, 8, 12, 30, 0).unwrap());
     }
 
     #[test]
     fn it_can_add_weeks() {
         let carbono = Carbono::now().add_weeks(10);
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2000, 3, 10, 23, 59, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2023, 2, 23, 12, 30, 0).unwrap());
     }
 
     #[test]
     fn it_can_subtract_weeks() {
         let carbono = Carbono::now().sub_weeks(10);
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(1999, 10, 22, 23, 59, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2022, 10, 6, 12, 30, 0).unwrap());
     }
 }

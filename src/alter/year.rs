@@ -36,27 +36,27 @@ mod tests {
     fn it_can_add_a_year() {
         let carbono = Carbono::now().add_year();
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2000, 12, 31, 23, 59, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2023, 12, 15, 12, 30, 0).unwrap());
     }
 
     #[test]
     fn it_can_subtract_a_year() {
         let carbono = Carbono::now().sub_year();
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(1998, 12, 31, 23, 59, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2021, 12, 15, 12, 30, 0).unwrap());
     }
 
     #[test]
     fn it_can_add_years() {
         let carbono = Carbono::now().add_years(10);
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2009, 12, 31, 23, 59, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2032, 12, 15, 12, 30, 0).unwrap());
     }
 
     #[test]
     fn it_can_subtract_years() {
         let carbono = Carbono::now().sub_years(10);
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(1989, 12, 31, 23, 59, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2012, 12, 15, 12, 30, 0).unwrap());
     }
 }

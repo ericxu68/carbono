@@ -36,27 +36,27 @@ mod tests {
     fn it_can_add_a_month() {
         let carbono = Carbono::now().add_month();
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2000, 1, 31, 23, 59, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2023, 1, 15, 12, 30, 0).unwrap());
     }
 
     #[test]
     fn it_can_subtract_a_month() {
         let carbono = Carbono::now().sub_month();
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(1999, 11, 30, 23, 59, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2022, 11, 15, 12, 30, 0).unwrap());
     }
 
     #[test]
     fn it_can_add_months() {
         let carbono = Carbono::now().add_months(10);
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2000, 10, 31, 23, 59, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2023, 10, 15, 12, 30, 0).unwrap());
     }
 
     #[test]
     fn it_can_subtract_months() {
         let carbono = Carbono::now().sub_months(10);
 
-        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(1999, 2, 28, 23, 59, 59).unwrap());
+        assert_eq!(carbono.datetime, Utc.with_ymd_and_hms(2022, 2, 15, 12, 30, 0).unwrap());
     }
 }

@@ -79,7 +79,7 @@ impl Carbono {
 
     #[cfg(any(test, feature = "testing"))]
     pub fn is_today(&self) -> bool {
-        let today = Utc.with_ymd_and_hms(1999, 12, 31, 23, 59, 59)
+        let today = Utc.with_ymd_and_hms(2022, 12, 15, 0, 0, 0)
             .unwrap()
             .date_naive();
 
