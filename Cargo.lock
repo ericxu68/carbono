@@ -28,6 +28,7 @@ name = "carbono"
 version = "0.1.0"
 dependencies = [
  "chrono",
+ "chronoutil",
 ]
 
 [[package]]
@@ -55,6 +56,15 @@ dependencies = [
  "time",
  "wasm-bindgen",
  "winapi",
+]
+
+[[package]]
+name = "chronoutil"
+version = "0.2.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ce5f90c3470252c073f12e34c9953a26330ab8a2dec6e5b9ffdd72fa254e0bea"
+dependencies = [
+ "chrono",
 ]
 
 [[package]]

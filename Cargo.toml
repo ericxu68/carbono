@@ -3,13 +3,14 @@ name = "carbono"
 version = "0.1.0"
 edition = "2021"
 license = "MIT"
-description = "A simple Rust API extension for Datetime."
+description = "Carbono is a simple Rust API extension for chrono DateTime."
 repository = "https://github.com/tjardoo/carbono"
 documentation = "https://docs.rs/carbono"
 keywords = ["calendar", "date", "time"]
 
 [dependencies]
 chrono = "0.4.24"
+chronoutil = "0.2.4"
 
 [features]
 testing = []
