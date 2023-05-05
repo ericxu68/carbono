@@ -46,6 +46,10 @@ impl Carbono {
         self.datetime.time().to_string()
     }
 
+    pub fn weekday(&self) -> u8 {
+        self.datetime.weekday() as u8
+    }
+
     pub fn is_past(&self) -> bool {
         let now = Utc::now();
 
@@ -72,5 +76,33 @@ impl Carbono {
             .date_naive();
 
         self.datetime.date_naive() == today
+    }
+
+    pub fn is_monday(&self) -> bool {
+        self.weekday() == Weekday::Mon as u8
+    }
+
+    pub fn is_tuesday(&self) -> bool {
+        self.weekday() == Weekday::Tue as u8
+    }
+
+    pub fn is_wednesday(&self) -> bool {
+        self.weekday() == Weekday::Wed as u8
+    }
+
+    pub fn is_thursday(&self) -> bool {
+        self.weekday() == Weekday::Thu as u8
+    }
+
+    pub fn is_friday(&self) -> bool {
+        self.weekday() == Weekday::Fri as u8
+    }
+
+    pub fn is_saturday(&self) -> bool {
+        self.weekday() == Weekday::Sat as u8
+    }
+
+    pub fn is_sunday(&self) -> bool {
+        self.weekday() == Weekday::Sun as u8
     }
 }

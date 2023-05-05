@@ -18,6 +18,12 @@ fn main() {
     assert_eq!(carbono.date(), "1999-12-31");
     assert_eq!(carbono.time(), "23:59:59");
 
+    assert_eq!(carbono.weekday(), 4); // Friday
+
+    assert_eq!(carbono.is_thursday(), false);
+    assert_eq!(carbono.is_friday(), true);
+    assert_eq!(carbono.is_saturday(), false);
+
     assert_eq!(carbono.is_past(), true);
     assert_eq!(carbono.is_future(), false);
 
