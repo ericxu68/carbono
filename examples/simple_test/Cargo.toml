@@ -6,4 +6,3 @@ publish = false
 
 [dependencies]
 carbono = { path = "./../../../carbono", features = ["testing"] }
-chrono = "0.4.24"
